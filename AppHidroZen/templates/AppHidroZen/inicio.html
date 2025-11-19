@@ -1,0 +1,49 @@
+{% extends "AppHidroZen/base.html" %}
+{% load static %}
+
+{% block title %}
+    Login - HidroZen
+{% endblock %}
+
+{% block content %}
+<body class="inicio-body">
+    <header class="inicio-header">
+        <h1 class="inicio-main-title">¡Riega tus plantas sin preocupaciones!</h1>
+        <p class="inicio-description">Nuestro sistema automatizado cuida de tu jardín para que tú no tengas que hacerlo.</p>
+        <div class="inicio-botones">
+            <a href="{% url 'programacion_automatica' %}" class="inicio-link-programar">
+                <button class="inicio-boton-principal" type="button">Riego Automático</button>
+            </a>
+            <a href="{% url 'riego_manual' %}" class="inicio-link-manual">
+                <button class="inicio-boton-secundario" type="button">Riego Manual</button>
+            </a>
+        </div>
+    </header>
+<p>ESP32 IP: {{ esp32_ip }}</p>
+
+    <section class="inicio-beneficios">
+        <h2 class="inicio-beneficios-titulo">Beneficios Clave</h2>
+        <ul class="inicio-beneficios-lista">
+            <li class="inicio-beneficio-item">* Ahorro de agua inteligente</li>
+            <li class="inicio-beneficio-item">* Programación personalizada</li>
+            <li class="inicio-beneficio-item">* Plantas más saludables y felices</li>
+        </ul>
+    </section>
+<!-- IP del ESP32 obtenida desde Django -->
+<!--http://127.0.0.1:8000/obtener_ip/  al abrir el navegador y pego esta URL, 
+deveria ver   una pequeña respuesta JSON en la pantalla que dice: {"ip": "http://192.168.20.6"} 
+Esta es la IP de mi ESP32 que reportó y que Django tiene registrada.
+Eso confirma que:
+Django está leyendo correctamente el archivo esp32_ip.txt.
+La ruta /obtener_ip/ está bien creada y conectada con la vista que retorna la IP. -->
+
+
+<!-- IP del ESP32 obtenida desde Django -->
+<script>
+const esp32IP = "{{ esp32_ip }}";
+</script>
+
+
+<script src="{% static 'js/inicio.js' %}"></script>   
+</body>
+{% endblock %}

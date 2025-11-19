@@ -1,0 +1,59 @@
+{% extends "AppHidroZen/base.html" %}
+
+{% block title %}
+    Registro - HidroZen
+{% endblock %}
+
+{% block content %}
+
+
+
+<!-- From Uiverse.io by rahilansari261 --> 
+<div class="form">
+    <div class="title">Bienvenido</div>
+    <div class="subtitle">¡Vamos a crear tu cuenta!</div>
+
+<div class="input-container ic1">
+    <input placeholder="Ej: Juan" type="text" class="input" id="firstname">
+
+    <div class="cut"></div>
+    <label class="iLabel" for="firstname">Nombres</label>
+</div>
+
+<div class="input-container ic2">
+    <input placeholder="Ej: Molina" type="text" class="input" id="lastname">
+
+    <div class="cut"></div>
+    <label class="iLabel" for="lastname">Apellidos</label>
+</div>
+
+<div class="input-container ic2">
+    <input placeholder="Ej: Juan.molina@gmail.com" type="text" class="input" id="email">
+
+    <div class="cut cut-short"></div>
+    <label class="iLabel" for="email">Email</label>
+</div>
+
+<div class="input-container ic2">
+    <input 
+        type="password" 
+        id="password" 
+        class="input" 
+        required 
+        minlength="8" 
+        maxlength="20"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}"
+        title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial"
+        placeholder=""
+    >
+    <div class="cut cut-short"></div>
+    <label class="iLabel" for="password">Contraseña</label>
+</div>
+
+<a href="{% url 'inicio' %}">
+    <button class="submit" type="button" id="Registrarse">Registrarse</button>
+</a>
+
+</div>
+
+{% endblock %}

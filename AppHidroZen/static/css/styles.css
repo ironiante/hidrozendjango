@@ -1,0 +1,515 @@
+body {
+    min-height: 100vh;
+    background: url('/static/img/planta_tecjpg.jpg') no-repeat center center fixed;
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    font-family: 'Creepster', cursive;
+    margin: 0;
+    padding: 0;
+    color: #e6dada;
+    text-align: center;
+    animation: moverFondo 50s linear infinite;
+    display: flex;
+    flex-direction: column; /* Asegura que el footer esté en la parte inferior */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+    z-index: -1;
+}
+
+
+
+
+main {
+    flex-grow: 1; /* Permite que el contenido crezca y empuje el footer hacia abajo */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px; /* Espaciado interno */
+    margin-bottom: 100px; /* Separación del footer */
+    margin-top: -100px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #f0f8ff;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Separación entre el título y el párrafo */
+    color: #9FFF94;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px; /* Separación entre el párrafo y el botón */
+}
+
+.hero button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #044718;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #06d347;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+h2, p, .principal a {
+    color: #f0f8ff;
+}
+
+.btn-login {
+    background-color: #08f64f;
+}
+
+img { 
+    float: left;
+    margin: 20px 0 20px 20px;
+    width: 300px;
+    height: auto;
+}
+
+.principal {
+    list-style: none; 
+    padding: 10px;
+    margin: 0;
+    display: flex;  
+    justify-content: space-evenly;  /* Distribuye los elementos uniformemente */
+    align-items: center;  /* Alinea verticalmente los elementos */
+    border-radius: 5px;  
+    border: 2px solid #9FFF94;
+    background-color: black;
+    box-shadow: inset 0 0 10px rgba(44, 48, 46, 0.4), 0 0 9px 3px rgba(27, 253, 156, 1);
+    position: fixed; 
+    top: 0;  
+    width: 100%;  
+    z-index: 1000;
+}
+
+
+.input {
+    background-color: #e7dada;
+    max-width: 190px;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px rgb(249, 255, 85);
+}
+
+.input:focus {
+    color: rgb(106, 108, 108);
+    outline-color: cyan;
+    box-shadow: -3px -3px 15px cyan;
+    transition: box-shadow .1s;
+}
+
+.principal a {
+    text-decoration: none;  
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.principal a:hover {
+    background-color: #08f64f; 
+    color: #fff;  
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 0px; /* Ajusta este valor según la altura deseada */
+}
+
+
+button {
+    --green: #1BFD9C;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    border-radius: 0.6em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 5) 1%, transparent 35%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(44, 48, 46, 0.4), 0 0 9px 3px rgba(27, 253, 156, 1);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+
+/* From Uiverse.io by Sashank02 */ 
+.card {
+    padding: 20px;
+    width: 330px;
+    min-height: 370px;
+    border-radius: 20px;
+    background: #212121;
+    box-shadow: 5px 5px 8px #1b1b1b,
+            -5px -5px 8px #272727;
+    transition: 0.4s;
+}
+
+.card:hover {
+    translate: 0 -10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #b2eccf;
+    margin: 15px 0 0 10px;
+}
+
+.card-image {
+    min-height: 170px;
+    background-color: #1a1717;
+    border-radius: 15px;
+    background:#1f1e1e;
+    box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+
+.card-body {
+    margin: 13px 0 0 10px;
+    color: rgb(184, 184, 184);
+    font-size: 15px;
+}
+
+.footer {
+    float: right;
+    margin: 28px 0 0 18px;
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+.by-name {
+    font-weight: 700;
+}
+
+.card-general {
+    border: 2px solid #1BFD9C;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.card-general:hover {
+    color: #07ff07;
+    box-shadow: 2px 2px 15px #07ff07 inset;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-size: 650px 450px;
+    background-position: center;
+    background-color: #45a049;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #8886;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    color: #f0f8ff;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos generales del modal */
+/* Estilo general para la superposición (overlay) */
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Mostrar el modal cuando se navega al ID */
+:target {
+    display: block;
+}
+
+/* Estilo del contenido del modal */
+.popup-card {
+    background-color: #45a049;
+    width: 80%;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Estilo para el botón de cerrar (X) */
+.closeMision {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Nueva capa para cerrar el modal si se hace clic fuera del recuadro */
+.overlay:target::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Evitar que el contenido del modal interfiera con el clic fuera */
+.overlay:target .popup-card {
+    pointer-events: all;
+}
+
+
+
+.close:hover {
+    color: black;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
+}
+
+/***********************************************FOOTER****************************************************************/
+
+footer {
+    background-color: #1d221e;
+}
+/* From Uiverse.io by Zameerahmad01 */ 
+ul {
+    list-style: none;
+}
+
+.example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 6rem; /* Espaciado aún mayor entre íconos */
+}
+
+.example-2 .icon-content {
+    margin: 0 28px; /* Más espacio en los lados de cada ícono */
+}
+
+
+.example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+}
+.example-2 .icon-content .tooltip {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    transform: translateX(50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: 5px;
+}
+.example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+.example-2 .icon-content a:hover {
+    color: white;
+}
+.example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+    );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+}
+
+
+.auto-wrapper {
+    padding-top: 120px; /* Deja espacio para el navbar fijo */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #e6dada;
+}
+
+.auto-main-title {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #9FFF94;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.auto-soil-humidity {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #b2eccf;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.auto-slider-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.auto-progress-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.auto-progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px #1BFD9C;
+}
+
+.auto-progress-fill {
+    height: 100%;
+    background-color: #1BFD9C;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+
+
+
+
+
+

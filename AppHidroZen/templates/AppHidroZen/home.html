@@ -1,0 +1,52 @@
+{% extends "AppHidroZen/base.html" %}
+
+{% block title %}
+    Inicio - HidroZen
+{% endblock %}
+
+{% block content %}
+<header>
+    <div class="container">
+        {% load static %}
+        <img src="{% static 'img/HidroZenLogo-removebg-preview.png' %}" alt="HidroZenLogo" class="logo">      
+        <div class="header-content">
+            <h1>Bienvenido a HidroZen</h1>
+            <p>Avanza al futuro y deja que la naturaleza avance contigo.</p>
+            <hr>
+        </div>
+    </div>
+
+</header>
+
+<main>
+<section class="hero">
+    <h2>Riego Inteligente</h2>
+    <p>Descubre cómo HidroZen puede transformar tu jardín.</p>
+    <button onclick="openModal()">Más Información</button>
+</section>
+</main>
+
+
+
+    
+</section>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Sobre HidroZen</h2>
+            <p>HidroZen es un sistema de riego automatizado diseñado para proporcionar agua de manera equilibrada y armoniosa, promoviendo un ambiente de tranquilidad y bienestar para tus plantas.</p>
+            <p>Características:</p>
+            <ul>
+                <li>Riego inteligente y eficiente</li>
+                <li>Control remoto a través de una app</li>
+                <li>Sensores de humedad y temperatura</li>
+                <li>Fácil instalación y mantenimiento</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+{% endblock %}
+

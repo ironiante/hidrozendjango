@@ -1,0 +1,42 @@
+{% extends "AppHidroZen/base.html" %}
+{% load static %}
+
+{% block title %}
+    Riego Manual - HidroZen
+{% endblock %}
+
+{% block content %}
+<div class="manual-page-container">
+    <div class="manual-wrapper">
+        <h1 class="manual-main-title">Control de Riego Manual</h1>
+
+        <div class="manual-status-container">
+            <h2 class="manual-status-title">Estado del Riego Manual</h2>
+            <p class="manual-status-text" id="manualStatus">Inactivo</p>
+        </div>
+        
+
+        <div class="manual-controls">
+            <label class="switch">
+                <input type="checkbox" id="manualSwitch">
+                <span class="slider"></span>
+            </label>
+            <span class="switch-label">Apagado</span>
+        </div>
+
+        <div class="manual-duration-selector">
+            <label for="manualDuration">Duración (segundos):</label>
+            <input type="number" id="manualDuration" min="2" max="60" value="30">
+            <button class="manual-activate-timed-button" id="activateTimed">Activar por Duración</button>
+        </div>
+<div class="ip-display-container">
+    <button id="obtenerIPBtn" class="ip-button">Obtener IP del dispositivo wifi</button>
+    <p id="ipMostrada" class="ip-texto">IP del ESP-32: <span id="ipValor">No detectada</span></p>
+</div>
+        <div class="manual-feedback" id="manualFeedback">
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/riego_manual.js' %}"></script>
+{% endblock %}

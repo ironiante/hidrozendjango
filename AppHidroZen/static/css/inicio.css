@@ -1,0 +1,105 @@
+/* Estilos generales para los botones de inicio (más neutro) */
+.inicio-boton-principal,
+.inicio-boton-secundario {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    /* Eliminamos cualquier propiedad relacionada con degradados o sombras */
+    background-image: none;
+    box-shadow: none;
+}
+
+/* Estilo para el botón principal de inicio (Programar Riego Automático - Neutro) */
+.inicio-boton-principal {
+    background-color: #519c1f; /* Gris claro */
+    color: #f0eded; /* Gris oscuro para el texto */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+.inicio-boton-principal:hover {
+    background-color: #e0e0e0; /* Gris ligeramente más oscuro al pasar el ratón */
+    color: #222;
+    border-color: #bbb;
+}
+
+/* Estilo para el botón secundario de inicio (Riego Manual - Neutro) */
+.inicio-boton-secundario {
+    background-color:rgb(33, 33, 33); /* Fondo transparente */
+    color: #dbd8d8; /* Gris medio para el texto */
+    border: 1px solid #999; /* Borde gris medio */
+}
+
+.inicio-boton-secundario:hover {
+    background-color: #f0f0f0; /* Gris claro al pasar el ratón */
+    color: #333;
+    border-color: #888;
+}
+
+/* Estilos para el contenedor de los botones de inicio (sin cambios) */
+.inicio-botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ... (resto de tus estilos de inicio.css) ... */
+
+/* Estilos para el encabezado de inicio */
+.inicio-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(248, 248, 248, 0.7);
+    border-bottom: 1px solid #eee;
+}
+
+.inicio-main-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inicio-description {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Estilos para la sección de beneficios de inicio */
+.inicio-beneficios {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.inicio-beneficios-titulo {
+    font-size: 2em;
+    color: #f0e7e7;
+    margin-bottom: 15px;
+}
+
+.inicio-beneficios-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.inicio-beneficio-item {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ede8e8;
+}
+
+/* Estilos para el cuerpo (opcional) */
+.inicio-body {
+    font-family: sans-serif; /* Puedes ajustar la fuente */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Estilos para los enlaces (opcional si quieres algo específico) */
+.inicio-link-programar,
+.inicio-link-manual {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
