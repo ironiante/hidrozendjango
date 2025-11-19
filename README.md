@@ -92,4 +92,4 @@ Configura los parámetros de riego según tus plantas desde la interfaz (cuando 
 ¡Listo! El sistema comenzará a funcionar de forma autónoma.
 
 👤 Autor  jirman rodriguez
-Cristian – Diseño y desarrollo del sistema HidroZen.
+– Diseño y desarrollo del sistema HidroZen.
